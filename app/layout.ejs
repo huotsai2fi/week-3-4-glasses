@@ -10,15 +10,34 @@
 </head>
 
 <body>
-  <header class="header">
-    這是 header
+  <header class="bg-primary text-white py-1">
+    <div class="container d-flex justify-content-between align-items-center">
+      <h1>
+        <a href="#">Glasses</a>
+      </h1>
+      <a href="#" class="toggleDropdown">
+        <span class="material-symbols-outlined">menu</span>
+      </a>
+      <ul class="dropdown">
+        <li><a href="#">系列鏡框</a></li>
+        <li><a href="#">門市據點</a></li>
+        <li><a href="#">部落格</a></li>
+        <li><a href="#">常見問題</a></li>
+      </ul>
+    </div>
   </header>
 
   <%- contents %>
 
-  <footer class="footer">
-    footer
+  <footer class="bg-primary">
+    <div class="container">
+      footer
+    </div>
   </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="./assets/js/all.js"></script>
 </body>
 
 </html>

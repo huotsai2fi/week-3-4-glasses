@@ -1,0 +1,35 @@
+@mixin box-sizing {
+  box-sizing: border-box;
+}
+
+@mixin font-family($font1, $font2) {
+  font-family: $font1, $font2, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Microsoft JhengHei', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+@mixin img-responsive {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+@mixin hide-text($img-url) {
+  background-image: url($img-url);
+  display: block;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* break points */
+@mixin tablet {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin moblie {
+  @media (max-width: 767px) {
+    @content;
+  }
+} ;

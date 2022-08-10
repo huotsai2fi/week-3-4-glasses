@@ -1,0 +1,52 @@
+/* display */
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.gap-4 {
+  gap: 4rem;
+}
+
+/* box model */
+.py-1 {
+  padding-block: 1rem;
+}
+
+/* background color */
+.bg-primary {
+  background-color: $primary;
+}
+
+/* font size */
+.fz-4 {
+  font-size: 1.25rem;
+}
+
+/* text color */
+.text-white {
+  color: #fff;
+}
+
+.text-primary {
+  color: $primary;
+}
+
+.text-primary-dark {
+  color: $primary-dark;
+}

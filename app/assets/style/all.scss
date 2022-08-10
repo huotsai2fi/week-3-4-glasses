@@ -1,6 +1,16 @@
-@import 'reset';
-@import 'variable';
-@import 'mixin';
-@import 'layout';
+/* google font*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Roboto:ital,wght@0,400;1,900&display=swap');
+
+/* material icon*/
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+@import 'settings/reset';
+@import 'settings/variable';
+@import 'settings/mixin';
+@import 'settings/base';
+@import 'settings/utility';
+@import 'settings/grid';
+
+@import 'layout/layout';
 
 @import 'pages/index';

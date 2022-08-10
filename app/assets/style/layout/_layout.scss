@@ -1,0 +1,68 @@
+/* header */
+
+header {
+  position: relative;
+}
+
+header h1 a {
+  @include hide-text('../../assets/images/logo-white.png');
+  width: 80px;
+  height: 48px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.toggleDropdown {
+  display: none;
+  @include moblie {
+    display: inline;
+  }
+  .material-symbols-outlined {
+    font-size: 40px;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+  }
+}
+
+.dropdown {
+  display: flex;
+  font-size: 1.25rem;
+  gap: 4rem;
+  @include moblie {
+    /*顯示*/
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    max-height: 0%;
+    transition: all 0.8s;
+    overflow: hidden;
+    z-index: 120;
+    /*顯示樣式*/
+    gap: 0;
+    background-color: $primary;
+    flex-direction: column;
+    text-align: center;
+    &.active {
+      max-height: 400%;
+    }
+  }
+
+  li {
+    @include moblie {
+      border-top: 1px solid white;
+    }
+  }
+
+  a {
+    &:hover {
+      transform: scale(1.1);
+    }
+    @include moblie {
+      padding-block: 25px;
+      &:hover {
+        transform: none;
+        background-color: $primary-dark;
+      }
+    }
+  }
+}

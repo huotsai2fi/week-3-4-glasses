@@ -1,0 +1,70 @@
+/* color */
+$primary: #aa0601 !default;
+$primary-dark: #650300 !default;
+$secondary: #fbf2f2 !default;
+$white: white !default;
+$black: black !default;
+
+$colors: (
+  primary: $primary,
+  primary-dark: $primary-dark,
+  secondary: $secondary,
+  white: $white,
+  black: $black,
+);
+
+/* space */
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 1,
+  1\.5: $spacer * 1.5,
+  2: $spacer * 2,
+  3: $spacer * 3,
+  4: $spacer * 4,
+  5: $spacer * 5,
+);
+
+/* direction */
+$directions: (
+  x: 'inline',
+  y: 'block',
+  s: 'left',
+  e: 'right',
+  t: 'top',
+  b: 'bottom',
+);
+
+/* grid */
+$percentages: (
+  25: 25%,
+  33: 33.33%,
+  50: 50%,
+  75: 75%,
+  100: 100%,
+);
+
+/* font */
+$font-size: (
+  14: 14px,
+  20: 20px,
+  36: 36px,
+  48: 48px,
+  64: 64px,
+);
+
+$font-weight: (
+  regular: 400,
+  medium: 500,
+  bold: 700,
+  black: 900,
+);
+
+/* RWD */
+$tablet: 992px !default;
+$mobile: 767px !default;
+$devices: (
+  pc: '',
+  tablet: '-md',
+  mobile: '-sm',
+);

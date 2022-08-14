@@ -1,0 +1,84 @@
+/* display */
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+/* RWD */
+$devices: (
+  pc: '',
+  tablet: '-md',
+  mobile: '-sm',
+);
+
+@each $device, $suffix in $devices {
+  @include create-responsive-classes($device) {
+    /* space */
+    @each $spacer, $s-value in $spacers {
+      .w-#{$spacer}#{$suffix} {
+        width: $s-value;
+      }
+      .h-#{$spacer}#{$suffix} {
+        height: $s-value;
+      }
+      .gap-#{$spacer}#{$suffix} {
+        gap: $s-value;
+      }
+      @each $direction, $d-value in $directions {
+        .m#{$direction}-#{$spacer}#{$suffix} {
+          margin-#{$d-value}: $s-value;
+        }
+        .p#{$direction}-#{$spacer}#{$suffix} {
+          padding-#{$d-value}: $s-value;
+        }
+      }
+    }
+
+    /* grid */
+    @each $percentage, $value in $percentages {
+      .w-#{$percentage}#{$suffix} {
+        width: $value;
+      }
+      .h-#{$percentage}#{$suffix} {
+        width: $value;
+      }
+    }
+
+    /* font size */
+    @each $size, $value in $font-size {
+      .text-#{$size}#{$suffix} {
+        font-size: $value;
+      }
+    }
+
+    /* color */
+    @each $color, $value in $colors {
+      .text-#{$color}#{$suffix} {
+        color: $value;
+      }
+      .bg-#{$color}#{$suffix} {
+        background-color: $value;
+      }
+      @each $direction, $d-value in $directions {
+        .border-#{$direction}-#{$color}#{$suffix} {
+          border-#{$d-value}: 1px solid $value;
+        }
+      }
+    }
+  }
+}

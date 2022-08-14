@@ -14,7 +14,7 @@ header h1 a {
 
 .toggleDropdown {
   display: none;
-  @include moblie {
+  @include mobile {
     display: inline;
   }
   .material-symbols-outlined {
@@ -27,7 +27,7 @@ header h1 a {
   display: flex;
   font-size: 1.25rem;
   gap: 4rem;
-  @include moblie {
+  @include mobile {
     /*顯示*/
     position: absolute;
     left: 0;
@@ -48,7 +48,7 @@ header h1 a {
   }
 
   li {
-    @include moblie {
+    @include mobile {
       border-top: 1px solid white;
     }
   }
@@ -57,7 +57,7 @@ header h1 a {
     &:hover {
       transform: scale(1.1);
     }
-    @include moblie {
+    @include mobile {
       padding-block: 25px;
       &:hover {
         transform: none;

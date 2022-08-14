@@ -5,10 +5,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
 @import 'settings/reset';
-@import 'settings/variable';
-@import 'settings/mixin';
+@import 'settings/variables';
+@import 'settings/mixins';
 @import 'settings/base';
-@import 'settings/utility';
+@import 'settings/utilities';
 @import 'settings/grid';
 
 @import 'layout/layout';

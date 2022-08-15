@@ -1,0 +1,20 @@
+.banner {
+  height: 787px;
+  background-image: url('../../assets/images/home-header.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include mobile {
+    height: 396px;
+    background-image: url('../../assets/images/home-header-sm.png');
+  }
+  button {
+    margin-top: 4px;
+    @include mobile {
+      margin-top: 8px;
+    }
+    a {
+      padding: 6px 12px;
+    }
+  }
+}

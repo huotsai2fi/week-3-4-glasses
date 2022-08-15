@@ -41,8 +41,16 @@
   }
 }
 
+@mixin hover-background($background) {
+  transition: 0.3s;
+  &:hover {
+    background: $background;
+  }
+}
+
 @mixin hover-none {
   &:hover {
+    background: none;
     background-size: 0%;
     transform: none;
   }

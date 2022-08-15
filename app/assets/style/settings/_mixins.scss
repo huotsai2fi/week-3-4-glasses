@@ -21,6 +21,33 @@
   white-space: nowrap;
 }
 
+/* hover */
+@mixin hover-underline($color) {
+  padding-block: 5px;
+  background-image: linear-gradient($color, $color);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 0% 2px;
+  transition: 0.2s;
+  &:hover {
+    background-size: 100% 2px;
+  }
+}
+
+@mixin hover-scale($scale) {
+  transition: 0.3s;
+  &:hover {
+    transform: scale($scale);
+  }
+}
+
+@mixin hover-none {
+  &:hover {
+    background-size: 0%;
+    transform: none;
+  }
+}
+
 /* break points */
 @mixin tablet {
   @media (max-width: $tablet) {

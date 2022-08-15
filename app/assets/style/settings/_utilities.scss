@@ -1,24 +1,3 @@
-/* display */
-.d-none {
-  display: none;
-}
-
-.d-block {
-  display: block;
-}
-
-.d-flex {
-  display: flex;
-}
-
-.justify-content-between {
-  justify-content: space-between;
-}
-
-.align-items-center {
-  align-items: center;
-}
-
 /* RWD */
 $devices: (
   pc: '',
@@ -28,6 +7,38 @@ $devices: (
 
 @each $device, $suffix in $devices {
   @include create-responsive-classes($device) {
+    /* display */
+    .d-none#{$suffix} {
+      display: none;
+    }
+
+    .d-block#{$suffix} {
+      display: block;
+    }
+
+    .d-flex#{$suffix} {
+      display: flex;
+    }
+
+    .flex-column#{$suffix} {
+      flex-direction: column;
+    }
+
+    .justify-content-between#{$suffix} {
+      justify-content: space-between;
+    }
+
+    .align-items-center#{$suffix} {
+      align-items: center;
+    }
+
+    .align-items-start#{$suffix} {
+      align-items: start;
+    }
+
+    .flex-row-reverse#{$suffix} {
+      flex-direction: row-reverse;
+    }
     /* space */
     @each $spacer, $s-value in $spacers {
       .w-#{$spacer}#{$suffix} {
@@ -79,6 +90,19 @@ $devices: (
           border-#{$d-value}: 1px solid $value;
         }
       }
+    }
+
+    /* hover effect */
+    @each $color, $value in $colors {
+      .hover-underline-#{$color}#{$suffix} {
+        @include hover-underline($value);
+      }
+    }
+    .hover-scale#{$suffix} {
+      @include hover-scale(1.1);
+    }
+    .hover-none#{$suffix} {
+      @include hover-none;
     }
   }
 }

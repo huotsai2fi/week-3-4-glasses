@@ -17,6 +17,7 @@ $colors: (
 $spacer: 1rem;
 $spacers: (
   0: 0,
+  0\.5: $spacer * 0.5,
   1: $spacer * 1,
   1\.5: $spacer * 1.5,
   2: $spacer * 2,
@@ -47,6 +48,7 @@ $percentages: (
 /* font */
 $font-size: (
   14: 14px,
+  16: 16px,
   20: 20px,
   36: 36px,
   48: 48px,

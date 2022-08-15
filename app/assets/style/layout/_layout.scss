@@ -54,13 +54,15 @@ header h1 a {
   }
 
   a {
-    &:hover {
-      transform: scale(1.1);
-    }
+    // &:hover {
+    //   transform: scale(1.1);
+    // }
+    @include hover-underline(white);
     @include mobile {
       padding-block: 25px;
       &:hover {
-        transform: none;
+        // transform: none;
+        @include hover-none;
         background-color: $primary-dark;
       }
     }

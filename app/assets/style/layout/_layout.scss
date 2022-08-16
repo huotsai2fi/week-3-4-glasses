@@ -57,10 +57,8 @@ header h1 a {
     @include hover-underline(white);
     @include mobile {
       padding-block: 25px;
-      &:hover {
-        @include hover-none;
-        background-color: $primary-dark;
-      }
+      @include hover-reset;
+      @include hover-background($primary-dark);
     }
   }
 }

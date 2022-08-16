@@ -16,6 +16,10 @@ $devices: (
     }
     .d-flex#{$suffix} {
       display: flex;
+      flex-wrap: wrap;
+      & > * {
+        flex-shrink: 0;
+      }
     }
     .flex-column#{$suffix} {
       flex-direction: column;
@@ -83,6 +87,9 @@ $devices: (
         font-weight: $value;
       }
     }
+    .text-italic#{$suffix} {
+      font-style: italic;
+    }
 
     /* color */
     @each $color, $value in $colors {
@@ -111,8 +118,11 @@ $devices: (
     .hover-scale#{$suffix} {
       @include hover-scale(1.1);
     }
-    .hover-none#{$suffix} {
-      @include hover-none;
+    .hover-opacity#{$suffix} {
+      @include hover-opacity(0.6);
+    }
+    .hover-reset#{$suffix} {
+      @include hover-reset;
     }
 
     /* text align */
@@ -124,3 +134,12 @@ $devices: (
     }
   }
 }
+
+.card {
+  margin: -12px;
+  .card-item {
+    padding: 12px;
+  }
+}
+
+//有空確認哪些不用做RWD

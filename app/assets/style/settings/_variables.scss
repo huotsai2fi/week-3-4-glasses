@@ -3,14 +3,12 @@ $primary: #aa0601 !default;
 $primary-dark: #650300 !default;
 $secondary: #fbf2f2 !default;
 $white: white !default;
-$black: black !default;
 
 $colors: (
   primary: $primary,
   primary-dark: $primary-dark,
   secondary: $secondary,
   white: $white,
-  black: $black,
 );
 
 /* space */
@@ -18,9 +16,11 @@ $spacer: 1rem;
 $spacers: (
   0: 0,
   0\.5: $spacer * 0.5,
+  0\.75: $spacer * 0.75,
   1: $spacer * 1,
   1\.5: $spacer * 1.5,
   2: $spacer * 2,
+  2\.5: $spacer * 2.5,
   3: $spacer * 3,
   4: $spacer * 4,
   5: $spacer * 5,

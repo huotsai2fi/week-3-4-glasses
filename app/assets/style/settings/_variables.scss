@@ -4,6 +4,8 @@ $primary-dark: #650300 !default;
 $secondary: #fbf2f2 !default;
 $white: white !default;
 $gray: #707070 !default;
+$shadow: #00000020 !default;
+$dark: black !default;
 
 $colors: (
   primary: $primary,
@@ -11,6 +13,8 @@ $colors: (
   secondary: $secondary,
   white: $white,
   gray: $gray,
+  shadow: $shadow,
+  dark: $dark,
 );
 
 /* space */
@@ -28,6 +32,7 @@ $spacers: (
   4: $spacer * 4,
   4\.5: $spacer * 4.5,
   5: $spacer * 5,
+  6: $spacer * 6,
 );
 
 /* space direction */

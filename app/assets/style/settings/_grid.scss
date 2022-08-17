@@ -40,9 +40,16 @@ $percentages: (
     /* grid */
     $count: map-get($grid-count, $device);
     @for $i from 1 through $count {
+      // .col-#{$i}#{$suffix} {
+      //   width: #{(map-get($grid-width, $device) + $grid-gutter) * $i + 'px'};
+      //   padding-inline: #{$grid-gutter/2 + 'px'};
+      // }
       .col-#{$i}#{$suffix} {
-        width: #{(map-get($grid-width, $device) + $grid-gutter) * $i + 'px'};
-        padding-inline: #{$grid-gutter/2 + 'px'};
+        width: #{map-get($grid-width, $device) *
+          $i +
+          $grid-gutter *
+          ($i - 1) +
+          'px'};
       }
     }
 

@@ -21,6 +21,10 @@
   white-space: nowrap;
 }
 
+@mixin align-block-center {
+  margin-inline: auto;
+}
+
 /* hover */
 @mixin hover-underline($color) {
   padding-block: 5px;
@@ -67,13 +71,13 @@
 
 /* break points */
 @mixin tablet {
-  @media (max-width: $tablet) {
+  @media (max-width: $tablet-breakpoint) {
     @content;
   }
 }
 
 @mixin mobile {
-  @media (max-width: $mobile) {
+  @media (max-width: $mobile-breakpoint) {
     @content;
   }
 }

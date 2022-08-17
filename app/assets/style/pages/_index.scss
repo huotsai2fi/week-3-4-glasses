@@ -18,3 +18,38 @@
     }
   }
 }
+
+.design {
+  background-image: url('../../assets/images/index-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  @include tablet {
+    background-image: url('../../assets/images/index-bg-md.png');
+  }
+  @include mobile {
+    background-image: url('../../assets/images/index-bg-sm.png');
+  }
+}
+
+.recommend {
+  @include mobile {
+    li:not(last-child) {
+      margin-bottom: -8px;
+    }
+  }
+  .recommend-text {
+    overflow: auto;
+    height: 112px;
+  }
+}
+
+.contact {
+  input:not([type='checkbox']) {
+    height: 33px;
+  }
+  input::placeholder,
+  textarea::placeholder {
+    padding-inline: 4px;
+  }
+}

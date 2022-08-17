@@ -1,11 +1,5 @@
 /* RWD */
-$devices: (
-  pc: '',
-  tablet: '-md',
-  mobile: '-sm',
-);
-
-@each $device, $suffix in $devices {
+@each $device, $suffix in $device-suffix {
   @include create-responsive-classes($device) {
     /* display */
     .d-none#{$suffix} {
@@ -14,12 +8,21 @@ $devices: (
     .d-block#{$suffix} {
       display: block;
     }
+    .d-inline#{$suffix} {
+      display: inline;
+    }
     .d-flex#{$suffix} {
       display: flex;
       flex-wrap: wrap;
       & > * {
         flex-shrink: 0;
       }
+    }
+    .flex-shrink-1#{$suffix} {
+      flex-shrink: 1;
+    }
+    .flex-nowrap#{$suffix} {
+      flex-wrap: nowrap;
     }
     .flex-column#{$suffix} {
       flex-direction: column;
@@ -39,11 +42,14 @@ $devices: (
     .align-items-end#{$suffix} {
       align-items: end;
     }
+    .align-items-baseline#{$suffix} {
+      align-items: baseline;
+    }
     .flex-row-reverse#{$suffix} {
       flex-direction: row-reverse;
     }
 
-    /* space */
+    /* box */
     @each $spacer, $s-value in $spacers {
       .w-#{$spacer}#{$suffix} {
         width: $s-value;
@@ -64,16 +70,6 @@ $devices: (
       }
     }
 
-    /* grid */
-    @each $percentage, $value in $percentages {
-      .w-#{$percentage}#{$suffix} {
-        width: $value;
-      }
-      .h-#{$percentage}#{$suffix} {
-        height: $value;
-      }
-    }
-
     /* font size */
     @each $size, $value in $font-size {
       .text-#{$size}#{$suffix} {
@@ -87,6 +83,8 @@ $devices: (
         font-weight: $value;
       }
     }
+
+    /* font style */
     .text-italic#{$suffix} {
       font-style: italic;
     }
@@ -132,9 +130,15 @@ $devices: (
     .text-end#{$suffix} {
       text-align: end;
     }
+
+    /* block align */
+    .align-block-center {
+      @include align-block-center;
+    }
   }
 }
 
+/* card */
 .card {
   margin: -12px;
   .card-item {
@@ -142,4 +146,8 @@ $devices: (
   }
 }
 
-//有空確認哪些不用做RWD
+.card-decoration {
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  box-shadow: 0px 2px 6px #00000029;
+}

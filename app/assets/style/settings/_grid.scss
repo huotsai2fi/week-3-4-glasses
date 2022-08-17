@@ -1,3 +1,4 @@
+/* container */
 .container {
   max-width: 1320px;
   margin: 0 auto;
@@ -6,6 +7,53 @@
     max-width: 720px;
   }
   @include mobile {
-    max-width: 373px;
+    max-width: 372px;
+  }
+}
+
+/* grid */
+$grid-count: (
+  pc: 12,
+  tablet: 12,
+  mobile: 4,
+);
+
+$grid-width: (
+  pc: 86,
+  tablet: 36,
+  mobile: 69,
+);
+
+$grid-gutter: 24;
+
+/* grid(percentage) */
+$percentages: (
+  25: 25%,
+  33: 33.33%,
+  50: 50%,
+  75: 75%,
+  100: 100%,
+);
+
+@each $device, $suffix in $device-suffix {
+  @include create-responsive-classes($device) {
+    /* grid */
+    $count: map-get($grid-count, $device);
+    @for $i from 1 through $count {
+      .col-#{$i}#{$suffix} {
+        width: #{(map-get($grid-width, $device) + $grid-gutter) * $i + 'px'};
+        padding-inline: #{$grid-gutter/2 + 'px'};
+      }
+    }
+
+    /* grid(percentage) */
+    @each $percentage, $value in $percentages {
+      .w-#{$percentage}#{$suffix} {
+        width: $value;
+      }
+      .h-#{$percentage}#{$suffix} {
+        height: $value;
+      }
+    }
   }
 }

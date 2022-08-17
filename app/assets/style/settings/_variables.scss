@@ -3,18 +3,21 @@ $primary: #aa0601 !default;
 $primary-dark: #650300 !default;
 $secondary: #fbf2f2 !default;
 $white: white !default;
+$gray: #707070 !default;
 
 $colors: (
   primary: $primary,
   primary-dark: $primary-dark,
   secondary: $secondary,
   white: $white,
+  gray: $gray,
 );
 
 /* space */
 $spacer: 1rem;
 $spacers: (
   0: 0,
+  0\.25: $spacer * 0.25,
   0\.5: $spacer * 0.5,
   0\.75: $spacer * 0.75,
   1: $spacer * 1,
@@ -23,10 +26,11 @@ $spacers: (
   2\.5: $spacer * 2.5,
   3: $spacer * 3,
   4: $spacer * 4,
+  4\.5: $spacer * 4.5,
   5: $spacer * 5,
 );
 
-/* direction */
+/* space direction */
 $directions: (
   x: 'inline',
   y: 'block',
@@ -36,15 +40,6 @@ $directions: (
   b: 'bottom',
 );
 
-/* grid */
-$percentages: (
-  25: 25%,
-  33: 33.33%,
-  50: 50%,
-  75: 75%,
-  100: 100%,
-);
-
 /* font */
 $font-size: (
   14: 14px,
@@ -52,6 +47,7 @@ $font-size: (
   20: 20px,
   24: 24px,
   36: 36px,
+  40: 40px,
   48: 48px,
   64: 64px,
 );
@@ -63,10 +59,10 @@ $font-weight: (
   black: 900,
 );
 
-/* RWD */
-$tablet: 992px !default;
-$mobile: 767px !default;
-$devices: (
+/* RWD breakpoint */
+$tablet-breakpoint: 992px !default;
+$mobile-breakpoint: 767px !default;
+$device-suffix: (
   pc: '',
   tablet: '-md',
   mobile: '-sm',

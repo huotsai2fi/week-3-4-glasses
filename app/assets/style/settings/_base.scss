@@ -21,7 +21,8 @@ a {
   display: block;
 }
 
-button {
+button,
+input[type='submit'] {
   background-color: transparent;
   border-width: 0;
   font-family: inherit;

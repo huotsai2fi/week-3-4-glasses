@@ -14,7 +14,8 @@ function resetMenu(mql) {
 resetMenu(moblie);
 moblie.addEventListener('change', resetMenu); //漢堡選單
 
-$('.toggleDropdown').on('click', function () {
+$('.toggleDropdown').on('click', function (e) {
+  e.preventDefault();
   $(this).children('span').text(function (i, text) {
     return text === 'menu' ? 'close' : 'menu';
   });

@@ -21,4 +21,11 @@ $('.toggleDropdown').on('click', function (e) {
   });
   $('.dropdown').toggleClass('active');
 });
+"use strict";
+
+AOS.init({
+  duration: 1000,
+  offset: 150,
+  delay: 100
+});
 //# sourceMappingURL=all.js.map

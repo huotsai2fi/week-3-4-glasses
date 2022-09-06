@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>門市據點</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="./assets/style/all.css">
 </head>
 
@@ -30,8 +31,8 @@
   
 <main class="store">
   <div class="container pt-6 pt-5-md pt-2.5-sm py-5 py-4-sm">
-    <h2 class="ps-1 border-thick-s-primary text-48 text-24-sm text-bold">門市據點</h2>
-    <div class="mt-2 mb-2.5 my-1.5-sm col-4 col-7-md col-4-sm d-flex">
+    <h2 class="ps-1 border-thick-s-primary text-48 text-24-sm text-bold" data-aos="fade-down">門市據點</h2>
+    <div class="mt-2 mb-2.5 my-1.5-sm col-4 col-7-md col-4-sm d-flex" data-aos="fade-left">
       <label class="text-24 text-16-sm me-1 me-0.5-sm" for="location">選擇地區</label>
       <select class="flex-grow-1 px-0.75" name="location" id="location">
         <option value="taipei" selected>台北市</option>
@@ -39,7 +40,7 @@
         <option value="kaohsiung">高雄市</option>
       </select>
     </div>
-    <ul class="card d-flex">
+    <ul class="card d-flex" data-aos="fade-up">
       <li class="card-item w-33 w-50-md w-100-sm">
         <img src="./assets/images/store-1.png" alt="store">
         <p class="border-shadow px-1.5 py-0.5 text-24">台北中山旗艦店</p>
@@ -180,6 +181,8 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./assets/js/aos.js"></script>
   <script src="./assets/js/all.js"></script>
 </body>
 
